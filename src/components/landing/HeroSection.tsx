@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Particles from "@/components/ui/Particles";
 import { Download, Sparkles, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
 
@@ -17,12 +18,15 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-background/60" />
 
+      {/* Particles */}
+      <Particles />
+
       {/* Animated glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
 
-      <div className="container relative z-10 px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="container relative z-10 px-4 py-8 sm:py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 animate-fade-up"
@@ -34,17 +38,17 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1
-            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight opacity-0 animate-fade-up"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight opacity-0 animate-fade-up"
             style={{ animationDelay: '0.2s' }}
           >
             <span className="text-foreground">BiteVue</span>
             <br />
-            <span className="text-gradient">(Powered by Nexus)</span>
+            <span className="text-2xl sm:text-3xl lg:text-4xl text-gradient block mt-2">(Powered by Nexus)</span>
           </h1>
 
           {/* Subtitle */}
           <p
-            className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-up"
+            className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-up"
             style={{ animationDelay: '0.3s' }}
           >
             BiteVue is not just a barcode scanner; it is a <em>reasoning engine</em> that overlays intelligence onto the physical world. It transforms static product data into actionable, voice-first health insights.
@@ -52,7 +56,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up"
+            className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up mb-10"
             style={{ animationDelay: '0.4s' }}
           >
             <Button variant="hero" size="xl" className="group">
@@ -72,19 +76,19 @@ const HeroSection = () => {
 
           {/* Feature highlights */}
           <div
-            className="grid grid-cols-3 gap-6 max-w-2xl mx-auto pt-8 opacity-0 animate-fade-up"
+            className="grid grid-cols-3 gap-4 sm:gap-6 max-w-xl mx-auto pt-0 opacity-0 animate-fade-up"
             style={{ animationDelay: '0.6s' }}
           >
-            <div className="glass-strong rounded-2xl p-4 hover:scale-105 transition-transform">
-              <div className="text-3xl mb-2">👁️</div>
+            <div className="glass-strong rounded-2xl p-3 hover:scale-105 transition-transform">
+              <div className="text-2xl mb-1">👁️</div>
               <p className="text-sm font-medium text-foreground">See</p>
             </div>
-            <div className="glass-strong rounded-2xl p-4 hover:scale-105 transition-transform">
-              <div className="text-3xl mb-2">🧠</div>
+            <div className="glass-strong rounded-2xl p-3 hover:scale-105 transition-transform">
+              <div className="text-2xl mb-1">🧠</div>
               <p className="text-sm font-medium text-foreground">Think</p>
             </div>
-            <div className="glass-strong rounded-2xl p-4 hover:scale-105 transition-transform">
-              <div className="text-3xl mb-2">🗣️</div>
+            <div className="glass-strong rounded-2xl p-3 hover:scale-105 transition-transform">
+              <div className="text-2xl mb-1">🗣️</div>
               <p className="text-sm font-medium text-foreground">Speak</p>
             </div>
           </div>
