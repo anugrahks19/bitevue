@@ -48,10 +48,12 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" className="group">
-              <Download className="w-4 h-4" />
-              Download App
-            </Button>
+            <a href="/bitevue-release.apk" download>
+              <Button variant="hero" size="default" className="group">
+                <Download className="w-4 h-4" />
+                Download App
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -77,10 +79,12 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="w-full mt-4">
-                <Download className="w-4 h-4" />
-                Download App
-              </Button>
+              <a href="/bitevue-release.apk" download className="block w-full mt-4">
+                <Button variant="hero" size="lg" className="w-full">
+                  <Download className="w-4 h-4" />
+                  Download App
+                </Button>
+              </a>
             </div>
           </div>
         )}

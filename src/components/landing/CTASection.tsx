@@ -29,15 +29,17 @@ const CTASection = () => {
           {/* Download buttons */}
           {/* Download buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              variant="hero"
-              size="xl"
-              className="group min-w-[240px] h-16 text-lg relative overflow-hidden shadow-[0_0_40px_-10px_rgba(var(--primary),0.5)] hover:shadow-[0_0_60px_-10px_rgba(var(--primary),0.6)] transition-all duration-500"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <Download className="w-6 h-6 mr-3 animate-bounce" />
-              <span className="font-bold">Download App</span>
-            </Button>
+            <a href="/bitevue-release.apk" download>
+              <Button
+                variant="hero"
+                size="xl"
+                className="group min-w-[240px] h-16 text-lg relative overflow-hidden shadow-[0_0_40px_-10px_rgba(var(--primary),0.5)] hover:shadow-[0_0_60px_-10px_rgba(var(--primary),0.6)] transition-all duration-500"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Download className="w-6 h-6 mr-3 animate-bounce" />
+                <span className="font-bold">Download App</span>
+              </Button>
+            </a>
           </div>
 
           {/* Stats removed as per request */}

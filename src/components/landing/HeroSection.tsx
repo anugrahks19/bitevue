@@ -59,10 +59,12 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up mb-10"
             style={{ animationDelay: '0.4s' }}
           >
-            <Button variant="hero" size="xl" className="group">
-              <Download className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
-              Download Now
-            </Button>
+            <a href="/bitevue-release.apk" download>
+              <Button variant="hero" size="xl" className="group w-full sm:w-auto">
+                <Download className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
+                Download Now
+              </Button>
+            </a>
             <Button
               variant="heroOutline"
               size="xl"

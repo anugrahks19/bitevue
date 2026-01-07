@@ -7,7 +7,7 @@ const Footer = () => {
     Product: [
       { label: "Features", href: "#features" },
       { label: "Nexus AI", href: "#nexus" },
-      { label: "Download", href: "#download" },
+      { label: "Download", href: "/bitevue-release.apk", download: true },
     ],
     Legal: [
       { label: "Privacy", href: "#" },
@@ -70,6 +70,7 @@ const Footer = () => {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      {...(link.download ? { download: true } : {})}
                       className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200"
                     >
                       {link.label}
